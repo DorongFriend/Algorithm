@@ -1,15 +1,15 @@
-//조건에 맞게 수열 변환하기 1
-#include <vector>
+// l로 만들기
+#include <string>
 
 using namespace std;
 
-vector<int> solution(vector<int> arr) {
-
-    for (int i = 0; i < arr.size(); i++) {
-        if ((arr[i] >= 50) & (arr[i] % 2 == 0))
-            arr[i] = arr[i] / 2;
-        else if ((arr[i] < 50) & (arr[i] % 2 == 1))
-            arr[i] = arr[i] * 2;
+string solution(string myString) {
+    string answer = "";
+    for (int i = 0; i < myString.length(); i++) {
+        char tmp = myString.at(i);
+        if (tmp < 'l')
+            tmp = 'l';
+        answer = answer + tmp;
     }
-    return arr;
+    return answer;
 }
